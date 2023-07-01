@@ -109,7 +109,7 @@ class ActivityController extends Controller
     
         $SavedActivity->update($request->all());
     
-        return redirect()->route('activity.index')
+        return redirect()->route(HomeController::class,'index')
                         ->with('success','Activity successfully saved');
     }
 

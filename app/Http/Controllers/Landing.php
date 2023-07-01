@@ -8,7 +8,7 @@ class Landing extends Controller
 {
     public function Land()
     {
-        $title = '| Feeds';
+        $title = '| Welcome';
         return view('landing',compact('title'));
     }
 }
