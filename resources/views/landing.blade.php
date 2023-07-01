@@ -13,6 +13,8 @@
           <div class="h2">let's find something to do</div>
           <div class="p">Welcome to Do Something where the fun begin when you actually do it.</div>
           <div class="p text-break">Do something is an application that suggest you about activities you could do, it also track your saved activities and get you information about activities done around you. Let's start</div>
+          @guest
+
                                                 <a class="btn btn-primary" href="{{ route('login') }}">
                                                     {{ __('Login') }}
                                                 </a>
@@ -22,6 +24,11 @@
                                                     {{ __('Register') }}
                                                 </a>
                                             @endif
+          @else
+            <a class="btn btn-primary" href="\home">
+              Start Find activity
+            </a>
+          @endguest
           </div>  
         </div>
       </div>
