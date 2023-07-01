@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
-
+use App\Http\Controllers\Landing;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +21,8 @@ use App\Http\Controllers\ActivityController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [HomeController::class,'index']);
-Route::get('/home', function () {
-    return redirect('/');
-});
+Route::get('/', [Landing::class,'land']);
+Route::get('/home', [HomeController::class,'index']);
 Route::get('/feeds', [HomeController::class,'feeds']);
 Auth::routes();
 
